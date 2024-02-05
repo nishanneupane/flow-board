@@ -17,7 +17,7 @@ const Footer = ({ authorLabel, createdAtLabel, disabled, isFavorite, onClick, ti
         onClick()
     }
     return (
-        <div className='relative bg-white p-3'>
+        <div className='relative bg-white dark:bg-black p-3'>
             <p className="text-[13px] truncate max-w-[calc(100%-20px)]">
                 {title}
             </p>

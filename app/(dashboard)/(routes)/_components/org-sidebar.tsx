@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { OrganizationSwitcher } from '@clerk/nextjs'
 import { LayoutDashboard, Star } from 'lucide-react'
+import { useTheme } from 'next-themes'
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -16,6 +17,7 @@ const font = Poppins({
 const OrgSidebar = () => {
     const searchParams = useSearchParams();
     const favorites = searchParams.get("favorites")
+    const themes = useTheme()
     return (
         <div className='hidden lg:flex flex-col space-y-6 w-[206px] pl-5 pt-5'>
             <Link href={"/"}>
@@ -26,7 +28,7 @@ const OrgSidebar = () => {
                         height={60}
                         width={60}
                     />
-                    <span className={cn("font-semibold text-xl text-black ml-2", font.className)}>
+                    <span className={cn("font-semibold text-xl text-black dark:text-white ml-2", font.className)}>
                         Flow Board
                     </span>
                 </div>
@@ -45,9 +47,10 @@ const OrgSidebar = () => {
                             padding: "6px",
                             width: "100%",
                             borderRadius: "8px",
-                            border: "1px solid #E5E7EB",
+                            border: themes.theme === "light"?"1px solid #E5E7EB":"1px solid gray",
                             justifyContent: "space-between",
-                            backgroundColor: "white"
+                            backgroundColor: themes.theme === "dark"?"black":"white",
+                            color: themes.theme === "dark"?"white":"black"
                         }
                     }
                 }}

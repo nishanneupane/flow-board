@@ -3,6 +3,7 @@ import { OrganizationSwitcher, UserButton, useOrganization } from '@clerk/nextjs
 import React from 'react'
 import SearchInput from './search-input'
 import InviteButton from './invite-button'
+import { ModeToggle } from '@/components/mode-toggle'
 
 const Navbar = () => {
   const { organization } = useOrganization()
@@ -38,6 +39,7 @@ const Navbar = () => {
           organization && <InviteButton />
         }
       </div>
+      <ModeToggle />
       <UserButton />
     </div>
   )
