@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'instagram-image': "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
     'pinterest-image': "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
     'whatsapp-image': "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
-    'keywords': "flow, board, ideas, collaboration, platform",
+    'keywords': "flow, board, ideas, collaboration, platform,whiteboard,nepal",
     'robots': "index, follow",
     'author': "Nishan Neupane",
   },
