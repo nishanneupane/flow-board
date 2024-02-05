@@ -15,10 +15,10 @@ export const metadata: Metadata = {
   other: {
     'theme-color': "#00d1117",
     'color-scheme': "dark only",
-    "twitter-image": "https://i.ibb.co/d6TXxB2/homepage-thumbnail.jpg",
+    "twitter-image": "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
     "twitter-card": "summary_large_image",
-    "og:url": "jsmasterypro-web.vercel.app",
-    "og:image": "https://i.ibb.co/d6TXxB2/homepage-thumbnail.jpg",
+    "og:url": "https://flow-board.vercel.app",
+    "og:image": "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
     "og:type": "website"
   }
 };
