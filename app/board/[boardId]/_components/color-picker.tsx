@@ -12,7 +12,7 @@ export const ColorPicker = ({
 }: ColorPickerProps) => {
   return (
     <div
-      className="flex flex-wrap gap-2 items-center max-w-[164px] pr-2 mr-2 border-r border-neutral-200"
+      className="flex flex-wrap gap-2 items-center max-w-[164px] pr-2 mr-2 border-r border-neutral-200 dark:border-neutral-700"
     >
       <ColorButton color={{ r: 243, g: 82, b: 35 }} onClick={onChange} />
       <ColorButton color={{ r: 255, g: 249, b: 177 }} onClick={onChange} />
