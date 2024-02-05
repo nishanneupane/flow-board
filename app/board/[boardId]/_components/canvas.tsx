@@ -4,27 +4,27 @@ import { nanoid } from "nanoid";
 import { useCallback, useMemo, useState, useEffect } from "react";
 import { LiveObject } from "@liveblocks/client";
 
-import { 
-  useHistory, 
-  useCanUndo, 
+import {
+  useHistory,
+  useCanUndo,
   useCanRedo,
   useMutation,
   useStorage,
   useOthersMapped,
   useSelf,
 } from "@/liveblocks.config";
-import { 
+import {
   colorToCss,
-  connectionIdToColor, 
-  findIntersectingLayersWithRectangle, 
-  penPointsToPathLayer, 
-  pointerEventToCanvasPoint, 
+  connectionIdToColor,
+  findIntersectingLayersWithRectangle,
+  penPointsToPathLayer,
+  pointerEventToCanvasPoint,
   resizeBounds,
 } from "@/lib/utils";
-import { 
-  Camera, 
-  CanvasMode, 
-  CanvasState, 
+import {
+  Camera,
+  CanvasMode,
+  CanvasState,
   Color,
   LayerType,
   Point,
@@ -39,10 +39,10 @@ import { SelectionTools } from "./selection-tools";
 import { CursorsPresence } from "./cursors-presence";
 import { useDisableScrollBounce } from "@/hooks/use-disable-bounce";
 import Toolbar from "./toolbar";
-import {LayerPreview} from "./layer-preview";
+import { LayerPreview } from "./layer-preview";
 import SelectionBox from "./selection-box";
 import Participants from "./participants";
-import {Path} from "./path";
+import { Path } from "./path";
 
 const MAX_LAYERS = 100;
 
@@ -65,8 +65,6 @@ export const Canvas = ({
     g: 0,
     b: 0,
   });
-
- 
 
   useDisableScrollBounce();
   const history = useHistory();
@@ -128,10 +126,10 @@ export const Canvas = ({
     }
 
     setCanvasState({ mode: CanvasMode.Translating, current: point });
-  }, 
-  [
-    canvasState,
-  ]);
+  },
+    [
+      canvasState,
+    ]);
 
   const unselectLayers = useMutation((
     { self, setMyPresence }
@@ -197,8 +195,8 @@ export const Canvas = ({
       cursor: point,
       pencilDraft:
         pencilDraft.length === 1 &&
-        pencilDraft[0][0] === point.x &&
-        pencilDraft[0][1] === point.y
+          pencilDraft[0][0] === point.x &&
+          pencilDraft[0][1] === point.y
           ? pencilDraft
           : [...pencilDraft, [point.x, point.y, e.pressure]],
     });
@@ -288,7 +286,7 @@ export const Canvas = ({
   }, []);
 
   const onPointerMove = useMutation((
-    { setMyPresence }, 
+    { setMyPresence },
     e: React.PointerEvent
   ) => {
     e.preventDefault();
@@ -308,16 +306,16 @@ export const Canvas = ({
     }
 
     setMyPresence({ cursor: current });
-  }, 
-  [
-    continueDrawing,
-    camera,
-    canvasState,
-    resizeSelectedLayer,
-    translateSelectedLayers,
-    startMultiSelection,
-    updateSelectionNet,
-  ]);
+  },
+    [
+      continueDrawing,
+      camera,
+      canvasState,
+      resizeSelectedLayer,
+      translateSelectedLayers,
+      startMultiSelection,
+      updateSelectionNet,
+    ]);
 
   const onPointerLeave = useMutation(({ setMyPresence }) => {
     setMyPresence({ cursor: null });
@@ -341,7 +339,7 @@ export const Canvas = ({
   }, [camera, canvasState.mode, setCanvasState, startDrawing]);
 
   const onPointerUp = useMutation((
-    {},
+    { },
     e
   ) => {
     const point = pointerEventToCanvasPoint(e, camera);
@@ -365,16 +363,16 @@ export const Canvas = ({
     }
 
     history.resume();
-  }, 
-  [
-    setCanvasState,
-    camera,
-    canvasState,
-    history,
-    insertLayer,
-    unselectLayers,
-    insertPath
-  ]);
+  },
+    [
+      setCanvasState,
+      camera,
+      canvasState,
+      history,
+      insertLayer,
+      unselectLayers,
+      insertPath
+    ]);
 
   const selections = useOthersMapped((other) => other.presence.selection);
 
@@ -399,13 +397,13 @@ export const Canvas = ({
       setMyPresence({ selection: [layerId] }, { addToHistory: true });
     }
     setCanvasState({ mode: CanvasMode.Translating, current: point });
-  }, 
-  [
-    setCanvasState,
-    camera,
-    history,
-    canvasState.mode,
-  ]);
+  },
+    [
+      setCanvasState,
+      camera,
+      history,
+      canvasState.mode,
+    ]);
 
   const layerIdsToColorSelection = useMemo(() => {
     const layerIdsToColorSelection: Record<string, string> = {};
@@ -448,6 +446,7 @@ export const Canvas = ({
       document.removeEventListener("keydown", onKeyDown)
     }
   }, [deleteLayers, history]);
+
 
   return (
     <main

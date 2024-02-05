@@ -46,6 +46,7 @@ export type Color = {
     fill: Color;
     points: number[][];
     value?: string;
+    font?:number;
   };
   
   export type TextLayer = {
