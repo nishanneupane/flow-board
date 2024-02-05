@@ -48,7 +48,7 @@ export const Info = ({
         <Button asChild variant="board" className="px-2">
           <Link href="/">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="Board logo"
               height={40}
               width={40}
