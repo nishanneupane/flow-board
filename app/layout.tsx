@@ -12,17 +12,27 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Flow Board",
-  description: "An generative ideas sharing platform through visual representation. It's just like miro and Figma.",
+  description: "A generative ideas sharing platform through visual representation. It's just like Miro and Figma.",
   other: {
     'theme-color': "#00d1117",
     'color-scheme': "dark only",
-    "twitter-image": "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
-    "twitter-card": "summary_large_image",
-    "og:url": "https://flow-board.vercel.app",
-    "og:image": "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
-    "og:type": "website"
-  }
+    'twitter-image': "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
+    'twitter-card': "summary_large_image",
+    'og:url': "https://flow-board.vercel.app",
+    'og:image': "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
+    'og:type': "website",
+    'facebook-image': "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
+    'linkedin-image': "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
+    'instagram-image': "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
+    'pinterest-image': "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
+    'whatsapp-image': "https://flow-board.vercel.app/_next/image?url=%2Flogo.png&w=128&q=75",
+    'keywords': "flow, board, ideas, collaboration, platform",
+    'robots': "index, follow",
+    'author': "Nishan Neupane",
+  },
 };
+
+
 
 export default function RootLayout({
   children,
