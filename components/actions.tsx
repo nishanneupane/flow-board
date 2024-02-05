@@ -30,8 +30,8 @@ const Actions = ({ children, id, title, side, sideOffset }: ActionProps) => {
     }
     const onDelete = () => {
         mutate({ id })
-            .then(() => toast.success("Board deleted"))
-            .catch(() => toast.error("Failed to delete board"))
+            .then(() => toast.success("FBoard deleted"))
+            .catch(() => toast.error("Failed to delete FBoard"))
     }
     return (
         <DropdownMenu>
@@ -53,7 +53,7 @@ const Actions = ({ children, id, title, side, sideOffset }: ActionProps) => {
                     Rename
                 </DropdownMenuItem>
                 <ConfirmModal
-                    header="Delete Board?"
+                    header="Delete FBoard?"
                     description="this will delete the board and all of its content"
                     disabled={pending}
                     onConfirm={onDelete}

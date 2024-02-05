@@ -18,9 +18,9 @@ const EmptyBoards = () => {
             orgId: organization?.id,
             title: "Untitled"
         }).then((id) => {
-            toast.success("Board Created")
+            toast.success("FBoard Created")
             router.push(`/board/${id}`)
-        }).catch(() => toast.error("Failed to create the board."))
+        }).catch(() => toast.error("Failed to create the FBoard."))
     }
     return (
         <div className='h-full flex flex-col items-center justify-center'>
@@ -33,10 +33,10 @@ const EmptyBoards = () => {
             <h2 className="text-2xl font-semibold mt-6">
                 Create your first board
             </h2>
-            <p className='text-muted-foreground text-sm mt-2'>Start by creating a board for your organization</p>
+            <p className='text-muted-foreground text-sm mt-2'>Start by creating a FBoard for your organization</p>
             <div className="mt-6">
                 <Button onClick={onClick} disabled={pending} size={"lg"}>
-                    Create board
+                    Create FBoard
                 </Button>
             </div>
         </div>

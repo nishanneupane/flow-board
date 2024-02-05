@@ -23,21 +23,21 @@ const RenameModal = () => {
             id: initialValues.id,
             title
         }).then(() => {
-            toast.success("Board renamed")
+            toast.success("FBoard renamed")
             onClose()
         })
-            .catch(() => toast.error("Failed to rename board"))
+            .catch(() => toast.error("Failed to rename FBoard"))
     }
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogContent>
                 <DialogHeader>
                     <DialogTitle>
-                        Edit board title
+                        Edit FBoard title
                     </DialogTitle>
                 </DialogHeader>
                 <DialogDescription>
-                    Enter a new title for this board
+                    Enter a new title for this FBoard
                 </DialogDescription>
 
                 <form onSubmit={onSubmit} className='space-y-4'>

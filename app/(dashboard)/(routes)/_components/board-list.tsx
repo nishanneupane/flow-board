@@ -59,7 +59,7 @@ const BoardList = ({ orgId, query }: BoardListProps) => {
         <div>
             <h2 className="text-3xl">
                 {
-                    query.favorites ? "Favorites Boards" : "Team Boards"
+                    query.favorites ? "Favorites FBoards" : "Team FBoards"
                 }
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-5 mt-8 pb-18">

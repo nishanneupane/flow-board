@@ -11,9 +11,9 @@ const EmptyFavorites = () => {
                 alt='Empty'
             />
             <h2 className="text-2xl font-semibold mt-6">
-                No favorites boards !
+                No favorites FBoards !
             </h2>
-            <p className='text-muted-foreground text-sm mt-2'>Try favoriting a board.</p>
+            <p className='text-muted-foreground text-sm mt-2'>Try favoriting a FBoard.</p>
         </div>
     )
 }

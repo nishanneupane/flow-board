@@ -15,9 +15,9 @@ const NewBoardButton = ({ orgId, disabled }: { orgId: string, disabled?: boolean
             orgId,
             title: "Untitled"
         }).then((id) => {
-            toast.success("Board Created")
+            toast.success("FBoard Created")
             router.push(`/board/${id}`)
-        }).catch(() => toast.error("Failed to create board"))
+        }).catch(() => toast.error("Failed to create FBoard"))
     }
     return (
         <button
@@ -31,7 +31,7 @@ const NewBoardButton = ({ orgId, disabled }: { orgId: string, disabled?: boolean
             <div />
             <Plus className='h-12 w-12 text-white stroke-1 ' />
             <p className="text-sm text-white font-light">
-                New Board
+                New FBoard
             </p>
         </button>
     )
